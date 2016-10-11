@@ -63,7 +63,7 @@ import android.widget.ImageView;
  * For transition support, a 'rounding' variable has been
  * introduced. This value is bounded in [0f,1f] and provides
  * varying degrees of 'rounding'. At '0f', no rounding is applied.
- * A value of `1f` provides perfect rounding -> if (w == h) ==> this view
+ * A value of `1f` provides perfect rounding - (w == h) implies this view
  * is circular.
  *
  * Several features have been removed:
@@ -71,7 +71,7 @@ import android.widget.ImageView;
  *  - No support for drawing borders
  *  - No support of fill color
  *  - No 'disable' option - use {@link TransitionImageView#setRoundingProgress(float)}
- *    with {@link RoundingProgress#MIN#progressValue()} instead
+ *    with RoundingProgress#MIN#progressValue() instead
  */
 public class TransitionImageView extends ImageView {
 

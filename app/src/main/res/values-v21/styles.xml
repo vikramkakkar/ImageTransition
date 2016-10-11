@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="BaseAppTheme">
+        <!-- @transition/itl_image_transition is provided by ImageTransition library -->
+        <item name="android:windowSharedElementEnterTransition">@transition/itl_image_transition</item>
+        <item name="android:windowSharedElementExitTransition">@transition/itl_image_transition</item>
+    </style>
+
+</resources>

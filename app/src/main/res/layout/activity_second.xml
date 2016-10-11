@@ -21,7 +21,7 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:text="SECOND ACTIVITY"
+        android:text="@string/label_second_activity"
         android:fontFamily="sans-serif-thin"/>
 
 </LinearLayout>

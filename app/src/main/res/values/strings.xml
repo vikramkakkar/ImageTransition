@@ -9,4 +9,7 @@
     <string name="about_this_app_activity_content_intro">Image Transition library uses the following open source components:</string>
     <string name="about_this_app_activity_content_lib_title">Henning Dodenhof\'s CircleImageView</string>
     <string name="about_this_app_activity_content_lib_link">https://github.com/hdodenhof/CircleImageView</string>
+    <string name="label_first_activity">FIRST ACTIVITY</string>
+    <string name="label_second_activity">SECOND ACTIVITY</string>
+    <string name="label_instructions">Hold &amp; drag to move the image around\nClick to see the transition</string>
 </resources>

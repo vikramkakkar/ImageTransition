@@ -85,9 +85,9 @@ public class ImageTransitionUtil {
     };
 
     /**
-     * Returns a {@link SharedElementCallback} that works with the given `rounding` amounts.
+     * Returns a `SharedElementCallback` that works with the given `rounding` amounts.
      * A `startValue` of `1f` (or RoundingProgress.MAX.progressValue())
-     * & an `endValue` of `0f` (or RoundingProgress.MIN.progressValue())
+     * &amp; an `endValue` of `0f` (or RoundingProgress.MIN.progressValue())
      * will give you same functionality as {@link ImageTransitionUtil#DEFAULT_SHARED_ELEMENT_CALLBACK}.
      *
      * @param startValue rounding applied to TransitionImageView in the first Activity

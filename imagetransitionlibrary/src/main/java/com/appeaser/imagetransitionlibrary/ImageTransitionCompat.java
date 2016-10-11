@@ -17,33 +17,23 @@
 package com.appeaser.imagetransitionlibrary;
 
 import android.animation.Animator;
-import android.annotation.TargetApi;
-import android.content.Context;
-import android.os.Build;
-import android.transition.ChangeBounds;
-import android.transition.TransitionValues;
-import android.util.AttributeSet;
+import android.support.annotation.NonNull;
+import android.support.transition.ChangeBounds;
+import android.support.transition.TransitionValues;
 import android.view.ViewGroup;
 
 /**
- * A {@link android.transition.Transition} based on {@link ChangeBounds}
+ * A {@link android.support.transition.Transition} based
+ * on {@link android.support.transition.ChangeBounds}
  * that provides animation support between a circular
- * and rectangular ImageView (implemented as {@link TransitionImageView})
- * residing in two different activities.
+ * and rectangular ImageView (implemented as {@link TransitionImageView}).
+ * Note that this can only be used with components from
+ * package `android.support.transition`.
  * Functionality is provided by {@link ImageTransitionCompatHelper}.
+ *
+ * Under development
  */
-@TargetApi(Build.VERSION_CODES.KITKAT)
-public class ImageTransition extends ChangeBounds {
-
-    //private static final String PROPNAME_ROUNDING_PROGRESS = "itl:changeBounds:roundingProgress";
-
-    public ImageTransition() {
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ImageTransition(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
+class ImageTransitionCompat extends ChangeBounds {
 
     @Override
     public String[] getTransitionProperties() {
@@ -52,19 +42,20 @@ public class ImageTransition extends ChangeBounds {
     }
 
     @Override
-    public void captureStartValues(TransitionValues transitionValues) {
+    public void captureStartValues(@NonNull TransitionValues transitionValues) {
         super.captureStartValues(transitionValues);
         ImageTransitionCompatHelper.captureValues(transitionValues.view, transitionValues.values);
     }
 
     @Override
-    public void captureEndValues(TransitionValues transitionValues) {
+    public void captureEndValues(@NonNull TransitionValues transitionValues) {
         super.captureEndValues(transitionValues);
         ImageTransitionCompatHelper.captureValues(transitionValues.view, transitionValues.values);
     }
 
     @Override
-    public Animator createAnimator(ViewGroup sceneRoot, TransitionValues startValues, TransitionValues endValues) {
+    public Animator createAnimator(@NonNull ViewGroup sceneRoot, @NonNull TransitionValues startValues,
+                                   @NonNull TransitionValues endValues) {
         // pass parent's Animator
         return ImageTransitionCompatHelper.createAnimator(super.createAnimator(sceneRoot, startValues, endValues),
                 sceneRoot, endValues.view, startValues.values, endValues.values);

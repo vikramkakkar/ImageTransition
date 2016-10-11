@@ -20,7 +20,7 @@
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="FIRST ACTIVITY"
+            android:text="@string/label_first_activity"
             android:fontFamily="sans-serif-thin"/>
 
         <TextView
@@ -31,7 +31,7 @@
             android:gravity="center_horizontal"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:text="Hold &amp; drag to move the image around\nClick to see the transition"
+            android:text="@string/label_instructions"
             android:fontFamily="sans-serif-thin"/>
 
     </LinearLayout>
@@ -41,7 +41,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:transitionName="@string/blue_name"
-        android:src="@drawable/circle_placeholder"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"

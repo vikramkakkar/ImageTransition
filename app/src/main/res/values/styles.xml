@@ -1,15 +1,12 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <!-- @transition/itl_image_transition is provided by ImageTransition library -->
-        <item name="android:windowSharedElementEnterTransition">@transition/itl_image_transition</item>
-        <item name="android:windowSharedElementExitTransition">@transition/itl_image_transition</item>
-
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="AppTheme" parent="BaseAppTheme"/>
 
     <style name="AppTheme.Second" parent="AppTheme">
         <item name="android:windowBackground">@color/colorBgSecondAct</item>

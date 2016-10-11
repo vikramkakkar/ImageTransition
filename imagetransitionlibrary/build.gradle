@@ -1,11 +1,43 @@
+plugins {
+    id "com.jfrog.bintray" version "1.7"
+}
+
+plugins {
+    id "com.github.dcendents.android-maven" version "1.5"
+}
+
 apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'image-transition-library'
+
+    publishedGroupId = 'com.appeaser.imagetransitionlibrary'
+    libraryName = 'image-transition-library'
+    artifact = 'image-transition-library'
+
+    libraryDescription = 'A small android library to transition between a circular ImageView from one Activity to a rectangular ImageView in the launched Activity.'
+
+    siteUrl = 'https://github.com/vikramkakkar/ImageTransition'
+    gitUrl = 'https://github.com/vikramkakkar/ImageTransition'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'vikramkakkar'
+    developerName = 'Vikram Kakkar'
+    developerEmail = 'vikram.kakkar.01@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 24
         versionCode 1
         versionName "0.1"
@@ -18,8 +50,22 @@ android {
     }
 }
 
+configurations {
+    javadocDeps
+}
+
+task allJavadoc(dependsOn: ['assembleRelease'], type: Javadoc) {
+    classpath += configurations.javadocDeps
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    javadocDeps 'com.android.support:support-annotations:24.2.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:24.2.1'
     compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:transition:24.2.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
