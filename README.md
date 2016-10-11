@@ -31,13 +31,15 @@ Usage
 
 1. Use com.appeaser.imagetransitionlibrary.TransitionImageView in place of ImageView. The `rounding` value can be set using `app:tiv_rounding` attribute. Value must be within [0,1] - *0* for no rounding, *1* for perfect rounding. Set `android:transitionName` attribute.
 
-    <com.appeaser.imagetransitionlibrary.TransitionImageView
-        android:id="@+id/picture"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:scaleType="centerCrop"
-        android:transitionName="@string/iv_transition_name"
-        app:tiv_rounding="0"/>
+```
+<com.appeaser.imagetransitionlibrary.TransitionImageView
+    android:id="@+id/picture"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:scaleType="centerCrop"
+    android:transitionName="@string/iv_transition_name"
+    app:tiv_rounding="0"/>
+```    
 
 Note: `com.appeaser.imagetransitionlibrary.TransitionImageView` only works with `scaleType="centerCrop"`. This restriction has been inherited from Henning Dodenhof's [CircleImageView](https://github.com/hdodenhof/CircleImageView).        
 
