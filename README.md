@@ -4,8 +4,10 @@
 
 Gradle dependency
 -----------------
-    
-    -==- is in the works -==-
+
+```    
+compile 'com.appeaser.imagetransitionlibrary:image-transition-library:0.0.1'
+```
 
 Walkthrough
 -----------
