@@ -45,47 +45,51 @@ Note: `com.appeaser.imagetransitionlibrary.TransitionImageView` only works with 
 
 2. Provide `@transition/itl_image_transition` as the value for `android:windowSharedElementEnterTransition` & `android:windowSharedElementExitTransition` under your Activity theme in `styles.xml`:
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-    	<item name="colorPrimary">...</item>
-        <item name="colorPrimaryDark">...</item>
-        <item name="colorAccent">...</item>
+```
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+	<item name="colorPrimary">...</item>
+    <item name="colorPrimaryDark">...</item>
+    <item name="colorAccent">...</item>
 
-        ....
-        ....
+    ....
+    ....
 
-        <!-- @transition/itl_image_transition is provided by ImageTransition library -->
-        <item name="android:windowSharedElementEnterTransition">@transition/itl_image_transition</item>
-        <item name="android:windowSharedElementExitTransition">@transition/itl_image_transition</item>
-    </style>
+    <!-- @transition/itl_image_transition is provided by ImageTransition library -->
+    <item name="android:windowSharedElementEnterTransition">@transition/itl_image_transition</item>
+    <item name="android:windowSharedElementExitTransition">@transition/itl_image_transition</item>
+</style>
+```
 
 3. In the second Activity's `onCreate(Bundle)` method, add the following line of code:
 
-    public class SecondActivity extends AppCompatActivity {
+```
+public class SecondActivity extends AppCompatActivity {
+
+    ....
+    ....
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         ....
         ....
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-
-            ....
-            ....
-
-            // SharedElementCallback needs be set in the second Activity.
-            // See ImageTrainsitionUtil for more info.
-            setEnterSharedElementCallback(ImageTransitionUtil.DEFAULT_SHARED_ELEMENT_CALLBACK);
-        }
-
-        ....
-        ....
-
-        @Override
-        public void onBackPressed() {
-            supportFinishAfterTransition();
-            super.onBackPressed();
-        }
+        // SharedElementCallback needs be set in the second Activity.
+        // See ImageTrainsitionUtil for more info.
+        setEnterSharedElementCallback(ImageTransitionUtil.DEFAULT_SHARED_ELEMENT_CALLBACK);
     }
+
+    ....
+    ....
+
+    @Override
+    public void onBackPressed() {
+        supportFinishAfterTransition();
+        super.onBackPressed();
+    }
+}
+```
 
 The sample app shows this approach.
 
@@ -95,21 +99,23 @@ Note: `ImageTransitionUtil.DEFAULT_SHARED_ELEMENT_CALLBACK` can be used only whe
 
 If you'd like to change the duration of the transition, or use the transition within your own set of transitions, or use a different interpolator, include the following:
 
-    <transitionSet
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:interpolator="your interpolator">
+```
+<transitionSet
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="your interpolator">
 
-        ....
-        ....
+    ....
+    ....
 
-        <transition
-            class="com.appeaser.imagetransitionlibrary.ImageTransition"
-            android:duration="your duration" />
+    <transition
+        class="com.appeaser.imagetransitionlibrary.ImageTransition"
+        android:duration="your duration" />
 
-        ....
-        ....
+    ....
+    ....
 
-    </transitionSet>
+</transitionSet>
+```
 
 Acknowledgements
 ----------------
