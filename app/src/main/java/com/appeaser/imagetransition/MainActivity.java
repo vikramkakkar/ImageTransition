@@ -67,11 +67,11 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_rate_this_app) {
             try {
                 startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("market://details?id=com.appeaser.sublimenavigationview")));
+                        Uri.parse("market://details?id=com.appeaser.imagetransition")));
             } catch (ActivityNotFoundException anfe1) {
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW,
-                            Uri.parse("http://market.android.com/details?id=com.appeaser.sublimenavigationview")));
+                            Uri.parse("http://market.android.com/details?id=com.appeaser.imagetransition")));
                 } catch (ActivityNotFoundException anfe2) {
                     Toast.makeText(this, "You need a browser app to view this link",
                             Toast.LENGTH_LONG).show();
