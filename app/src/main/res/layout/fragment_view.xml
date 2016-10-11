@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="FIRST ACTIVITY"
+            android:fontFamily="sans-serif-thin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="Hold &amp; drag to move the image around\nClick to see the transition"
+            android:fontFamily="sans-serif-thin"/>
+
+    </LinearLayout>
+
+    <com.appeaser.imagetransitionlibrary.TransitionImageView
+        android:id="@+id/image_circle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:transitionName="@string/blue_name"
+        android:src="@drawable/circle_placeholder"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:tiv_rounding="1"/>
+
+</FrameLayout>

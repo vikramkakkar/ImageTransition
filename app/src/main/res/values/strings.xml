@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ImageTransition</string>
+    <string name="title_second_activity">Second Activity</string>
+    <string name="blue_name">blue</string>
+    <string name="desc_rate_this_app">Rate this app</string>
+    <string name="desc_github_link">Github link</string>
+    <string name="desc_about_this_app">About this app</string>
+    <string name="title_about_this_app_activity">About this app</string>
+    <string name="about_this_app_activity_content_intro">Image Transition library uses the following open source components:</string>
+    <string name="about_this_app_activity_content_lib_title">Henning Dodenhof\'s CircleImageView</string>
+    <string name="about_this_app_activity_content_lib_link">https://github.com/hdodenhof/CircleImageView</string>
+</resources>

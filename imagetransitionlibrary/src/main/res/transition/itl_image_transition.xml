@@ -1,0 +1,13 @@
+<transitionSet
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/decelerate_cubic">
+
+    <!-- If you would like to use ImageTransition in your own
+         TransitionSet, include the following Transition
+         in there. -->
+
+    <transition
+        class="com.appeaser.imagetransitionlibrary.ImageTransition"
+        android:duration="300" />
+
+</transitionSet>
