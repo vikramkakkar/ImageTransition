@@ -12,7 +12,7 @@ Walkthrough
 Following gif has been taken from the sample application available here: [<img alt="Get it on Google Play" height="45px" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" />][1]
 
 <p align="center">
-    <img src="https://github.com/vikramkakkar/ImageTransition/blob/master/img/image_transition.gif?raw=true" width="285" height="553" />
+    <img src="https://github.com/vikramkakkar/ImageTransition/blob/master/img/image_transition.gif?raw=true" width="300" height="533" />
 </p>
 
 The transition has been slowed down for demo purposes.
@@ -20,11 +20,11 @@ The transition has been slowed down for demo purposes.
 Components
 ----------
 
-*ImageTransition:* [Transition](https://developer.android.com/reference/android/transition/Transition.html) based on [ChangeBounds](https://developer.android.com/reference/android/transition/ChangeBounds.html) that provides animation support between a circular and rectangular ImageView (implemented as TransitionImageView) residing in two different activities.
+**ImageTransition:** [Transition](https://developer.android.com/reference/android/transition/Transition.html) based on [ChangeBounds](https://developer.android.com/reference/android/transition/ChangeBounds.html) that provides animation support between a circular and rectangular ImageView (implemented as TransitionImageView) residing in two different activities.
 
-*TransitionImageView:* A modified version of Henning Dodenhof's [CircleImageView](https://github.com/hdodenhof/CircleImageView). Transition animators are run on this widget.
+**TransitionImageView:** A modified version of Henning Dodenhof's [CircleImageView](https://github.com/hdodenhof/CircleImageView). Transition animators are run on this widget.
 
-*ImageTransitionUtils:* Provides [SharedElementCallback](https://developer.android.com/reference/android/support/v4/app/SharedElementCallback.html) that is used to set values accessed in `ImageTransition`.
+**ImageTransitionUtils:** Provides [SharedElementCallback](https://developer.android.com/reference/android/support/v4/app/SharedElementCallback.html) that is used to set values accessed in `ImageTransition`.
 
 Usage
 -----
