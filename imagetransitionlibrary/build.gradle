@@ -14,7 +14,7 @@ ext {
 
     publishedGroupId = 'com.appeaser.imagetransitionlibrary'
     libraryName = 'image-transition-library'
-    artifact = 'image-transition-library'
+    artifact = 'imagetransitionlibrary'
 
     libraryDescription = 'A small android library to transition between a circular ImageView from one Activity to a rectangular ImageView in the launched Activity.'
 

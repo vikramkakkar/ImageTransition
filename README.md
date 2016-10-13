@@ -6,7 +6,7 @@ Gradle dependency
 -----------------
 
 ```    
-compile 'com.appeaser.imagetransitionlibrary:image-transition-library:0.0.1'
+compile 'com.appeaser.imagetransitionlibrary:imagetransitionlibrary:0.0.1'
 ```
 
 Walkthrough
