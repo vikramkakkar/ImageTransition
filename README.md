@@ -152,7 +152,7 @@ Acknowledgements
 
 As mentioned above, the library depends on Henning Dodenhof's [CircleImageView](https://github.com/hdodenhof/CircleImageView), released under Apache Licence, version 2.0. Many thanks to Henning Dodenhof for open-sourcing their work.
 
-The library also uses [Picasso](http://square.github.io/picasso/), released under Apache Licence, version 2.0. 
+The example app uses [Picasso](http://square.github.io/picasso/), released under Apache Licence, version 2.0. 
 
 License
 -------

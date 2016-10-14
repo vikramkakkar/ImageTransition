@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about_this_app_activity_content_lib_title"
+        android:text="@string/about_lib_title_circleimageview"
         android:textSize="15sp"
         android:layout_marginTop="16dp"
         android:textStyle="bold"/>
@@ -28,7 +28,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about_this_app_activity_content_lib_link"
+        android:text="@string/about_lib_link_circleimageview"
+        android:textSize="15sp"
+        android:autoLink="web"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_lib_title_picasso"
+        android:textSize="15sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_lib_link_picasso"
         android:textSize="15sp"
         android:autoLink="web"/>
 
