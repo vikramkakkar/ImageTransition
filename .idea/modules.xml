@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ImageTransition.iml" filepath="$PROJECT_DIR$/ImageTransition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageTransition.iml" filepath="$PROJECT_DIR$/ImageTransition.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagetransitionlibrary/imagetransitionlibrary.iml" filepath="$PROJECT_DIR$/imagetransitionlibrary/imagetransitionlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagetransitionlibrary/imagetransitionlibrary.iml" filepath="$PROJECT_DIR$/imagetransitionlibrary/imagetransitionlibrary.iml" />
     </modules>
   </component>
